@@ -7,7 +7,7 @@ import os
 import cv2
 import math
 from scipy.signal import convolve2d
-#Load the image 
+#Load the image
 def estimate_noise(I):
   H, W = I.shape
 
@@ -34,7 +34,7 @@ plt.subplot(121), plt.imshow(image2, cmap='gray'),plt.title('Original')
 plt.xticks([]), plt.yticks([])
 plt.subplot(122), plt.imshow(new_image, cmap='gray'),plt.title('Mean filter')
 plt.xticks([]), plt.yticks([])
-#plt.show()
+plt.show()
 
 
 image = cv2.imread('images/poisson_Ayush_Marriage.jpg')
@@ -51,7 +51,7 @@ plt.subplot(121), plt.imshow(image2, cmap='gray'),plt.title('Original')
 plt.xticks([]), plt.yticks([])
 plt.subplot(122), plt.imshow(new_image, cmap='gray'),plt.title('Mean filter')
 plt.xticks([]), plt.yticks([])
-#plt.show()
+plt.show()
 
 image = cv2.imread('images/S&P_Ayush_Marriage.jpg')
 # Generate Gaussian noise
@@ -61,19 +61,19 @@ print ("Estimating quality for S&P image before mean filter  %8.4f" % (before_qu
 figure_size = 9
 new_image = cv2.blur(image2,(figure_size, figure_size))
 after_quality = estimate_noise(new_image)
-print ("Estimating quality for S&P image after mean filter  %8.4f \n " % (after_quality)) 
+print ("Estimating quality for S&P image after mean filter  %8.4f \n " % (after_quality))
 plt.figure(figsize=(11,6))
 plt.subplot(121), plt.imshow(image2, cmap='gray'),plt.title('Original')
 plt.xticks([]), plt.yticks([])
 plt.subplot(122), plt.imshow(new_image, cmap='gray'),plt.title('Mean filter')
 plt.xticks([]), plt.yticks([])
-#plt.show()
+plt.show()
 
 image = cv2.imread('images/speckle_Ayush_Marriage.jpg')
 # Generate Gaussian noise
 image2 = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 before_quality = estimate_noise(image2)
-print ("Estimating quality for speckle image before mean filter  %8.4f" % (before_quality)) 
+print ("Estimating quality for speckle image before mean filter  %8.4f" % (before_quality))
 figure_size = 9
 new_image = cv2.blur(image2,(figure_size, figure_size))
 after_quality = estimate_noise(new_image)
@@ -83,4 +83,4 @@ plt.subplot(121), plt.imshow(image2, cmap='gray'),plt.title('Original')
 plt.xticks([]), plt.yticks([])
 plt.subplot(122), plt.imshow(new_image, cmap='gray'),plt.title('Mean filter')
 plt.xticks([]), plt.yticks([])
-#plt.show()
+plt.show()
