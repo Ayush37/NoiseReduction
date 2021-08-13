@@ -1,4 +1,4 @@
-# Noise Reduction Spatial (Topaz)
+# Noise Reduction Spatial (TopazLabs)
 ## Demo of implementing CICD pipeline for image noise reduction algos
 
 Here I am trying to run few basic Spatial denoise algos over a with 4 differnt types of noises added.
