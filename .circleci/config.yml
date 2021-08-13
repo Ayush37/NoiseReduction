@@ -38,13 +38,7 @@ jobs:
 
       - run:
           command: |
-            sudo pip install pipenv
-            pipenv install
-          paths:
-            - "venv"
-      - run:
-          command: |
-            pipenv run python -m unittest unittest/test.py
+                 python -m unittest unittest/test.py
            
       - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test-results
