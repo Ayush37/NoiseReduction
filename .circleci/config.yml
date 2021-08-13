@@ -38,7 +38,7 @@ jobs:
 
       - run:
           command: |
-                 python -m unittest unittest/test.py
+                 echo `pwd`
            
       - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test-results
