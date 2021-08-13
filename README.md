@@ -93,3 +93,47 @@ Estimating quality for speckle image after median filter    1.6339
 ```
 ![image](https://user-images.githubusercontent.com/19201225/129360465-34557a80-dd44-40a2-b455-c67593cef33f.png)
 
+### Guassian Filter
+
+```
+python GuassianBlur.py
+
+##### Running GAUSSIAN filter on different noises ####
+Estimating quality for guassian image before Gaussian filter   0.6361
+Estimating quality for guassian image after Gaussian filter   0.1825
+```
+![image](https://user-images.githubusercontent.com/19201225/129360835-55a0044f-dbd9-4b64-8a1c-f03db6716e3e.png)
+
+
+```
+Estimating quality for poisson image before Gaussian filter    0.6416
+Estimating quality for poisson image after Gaussian filter    0.1836
+```
+![image](https://user-images.githubusercontent.com/19201225/129360901-6581c648-a318-4227-8e57-800594ed7ad1.png)
+
+
+```
+Estimating quality for S&P image before Gaussian filter   11.9353
+Estimating quality for S&P image after Gaussian filter    0.2732
+```
+![image](https://user-images.githubusercontent.com/19201225/129360925-bb76629c-d5ea-4660-b4b7-3ba839c33792.png)
+
+```
+Estimating quality for speckle image before Gaussian filter   61.4482
+Estimating quality for speckle image after Gaussian filter    0.3154
+
+```
+![image](https://user-images.githubusercontent.com/19201225/129360982-ffa79db8-fc8e-4cb0-8d64-fa8bf12123f4.png)
+
+We can also run UnitTest on these algos
+
+```
+python -m unittest
+
+(DJ) ag841k@US-00010509:~/AG/TopazLabs$ python -m unittest test.py
+....
+----------------------------------------------------------------------
+Ran 4 tests in 13.222s
+
+```
+
