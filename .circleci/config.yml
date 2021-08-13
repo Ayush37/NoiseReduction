@@ -35,7 +35,19 @@ jobs:
           pkg-manager: pip
           # app-dir: ~/project/package-directory/  # If you're requirements.txt isn't in the root directory.
           # pip-dependency-file: test-requirements.txt  # if you have a different name for your requirements file, maybe one that combines your runtime and test requirements.
+
       - run:
-          name: Run tests
-          # This assumes pytest is installed via the install-package step above
-          command: python -m unittest unittest/test.py
+          command: |
+            sudo pip install pipenv
+            pipenv install
+          paths:
+            - "venv"
+      - run:
+          command: |
+            pipenv run python -m unittest unittest/test.py
+           
+      - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+          path: test-results
+      - store_artifacts: # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+          path: test-results
+          destination: tr1          
