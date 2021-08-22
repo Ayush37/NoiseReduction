@@ -1,5 +1,5 @@
 # Noise Reduction Spatial
-## Demo of implementing CICD pipeline for image noise reduction algos
+## Demo of implementing CICD pipeline for image noise reduction algos, conducting few sample test cases on CircleCI to test the resulting image reduction
 
 Here I am trying to run few basic Spatial denoise algos over a with 4 differnt types of noises added.
 
